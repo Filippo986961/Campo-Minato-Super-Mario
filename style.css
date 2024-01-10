@@ -1,0 +1,203 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Regole generiche */
+body {
+    padding: 16px;
+    line-height: 1;
+    color: rgb(0, 55, 140);
+    background-image: url(bg.jpg);
+    background-size: auto;
+    background-position: center;
+    font-family: 'Anek Latin', sans-serif;
+    text-shadow: -3.3px 0 rgb(255, 250, 25), 0 3.3px rgb(255, 250, 25), 3.3px 0 rgb(255, 250, 25), 0 -3.3px rgb(255, 250, 25);
+}
+
+.game-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+/* Pannello di gioco */
+h1 {
+    padding: 30px;
+    font-size: 40px;
+    justify-content: center;
+    display: flex;
+}
+
+.score {
+    padding: 10px;
+    font-size: 32px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.score-label {
+    margin-right: 290px;
+
+}
+
+/* Tabellone di gioco */
+.game-board {
+    position: relative;
+    border: 2px solid rgb(0, 23, 50);
+}
+
+.grid {
+    height: 480px;
+    width: 480px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.cell {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+    background-color: rgb(0, 96, 173);
+}
+
+.cell-dark {
+    background-color: rgb(0, 82, 162);
+}
+
+.cell:hover,
+.cell-clicked {
+    background-color: rgb(0, 55, 140);
+    background-image: url('defused.png');
+    background-size: contain;
+}
+
+.cell-bomb {
+    background-color: rgb(255, 250, 25);
+    background-image: url('bomb.png');
+    background-size: contain;
+}
+
+.cell-clicked,
+.cell-bomb {
+    cursor: not-allowed;
+}
+
+/* Audio di gioco */
+.audio-container {
+    display: flex;
+    align-items: start;
+}
+
+.icon-container {
+    cursor: pointer;
+    font-size: 24px;
+    color: rgb(0, 55, 140);
+    margin-left: 475px;
+    text-shadow: -1px 0 rgb(255, 250, 25), 0 1px rgb(255, 250,
+            25),
+        1px 0 rgb(255,
+            250,
+            25),
+        0 -1px rgb(255,
+            250,
+            25);
+}
+
+.audio-container {
+    display:
+        none;
+}
+
+/* Schermata di fine gioco */
+.end-game-screen {
+    background-color:
+        rgba(238,
+            11,
+            11,
+            0.6);
+    text-shadow:
+        -3px 0 black,
+        0 3px black,
+        3px 0 black,
+        0 -3px black;
+    position: absolute;
+    top:
+        0;
+    left:
+        0;
+    right:
+        0;
+    bottom:
+        0;
+    display: flex;
+    flex-direction:
+        column;
+    align-items: center;
+    justify-content: center;
+}
+
+.win {
+    background-color:
+        rgba(55,
+            247,
+            7,
+            0.6);
+}
+
+.end-game-img {
+    width:
+        150px;
+}
+
+.end-game-text {
+    /* color:white; */
+    font-size:
+        48px;
+    line-height:
+        1.2;
+    text-transform:
+        uppercase;
+    font-family: 'New Super Mario Font U', sans-serif;
+    margin-bottom:
+        16px;
+    text-align: center;
+}
+
+.play-again {
+    /* border:
+2px solid rgb(
+0,
+23,
+50); */
+    color: white;
+    font-size:
+        24px;
+    font-family: 'New Super Mario Font U', sans-serif;
+    text-shadow: -3px 0 black,
+        0 3px black,
+        3px 0 black,
+        0 -3px black;
+    text-transform:
+        uppercase;
+    padding:
+        4px 20pz 8px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:
+        rgb(157,
+            197,
+            199);
+}
+
+.hidden {
+    display: none;
+}

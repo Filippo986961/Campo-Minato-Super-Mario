@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Campo Minato Super Mario Version</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anek+Latin:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/new-super-mario-font-u" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- Foglio di Stile -->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="icon" href="data:,">
+</head>
+
+<body>
+    <div class="game-container">
+        <!-- Pannello informazioni di gioco -->
+        <div class="game-panel">
+            <h1>Let's Go</h1>
+
+            <!-- Punteggio -->
+            <div class="score">
+                <span class="score-label">MARIO</span>
+                <span class="score-counter">00000</span>
+            </div>
+        </div>
+
+        <!-- Tabellone di gioco -->
+        <div class="game-board">
+            <div class="grid"></div>
+
+            <!-- Schermata di fine gioco -->
+            <div class="end-game-screen hidden">
+                <div id="end-game-img"></div>
+                <h2 class="end-game-text">Game Over</h2>
+                <h3 class="play-again">Continue</h3>
+            </div>
+        </div>
+
+        <!-- Audio di gioco -->
+        <div class="audio-container">
+            <audio src="song.mp3" autoplay controls loop></audio>
+        </div>
+
+        <!-- Icona di controllo dell'audio -->
+        <div class="icon-container" onclick="toggleAudio()">
+            <span class="material-icons">volume_up</span>
+        </div>
+        <audio id="victoryAudio" src="victory.mp3"></audio>
+        <audio id="defeatAudio" src="defeat.mp3"></audio>
+    </div>
+
+    <!-- Javascript -->
+    <script type="text/Javascript" src="script.js"></script>
+</body>
+
+</html>
